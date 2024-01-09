@@ -76,10 +76,19 @@ WSGI_APPLICATION = 'Eria_Cars.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'eriacars',
+        'USER': 'postgres' ,
+        'PASSWORD': 'admin123' ,
+        'HOST': 'localhost' ,
+        'PORT': '5432' ,
     }
 }
+
+
+#MEDIA Settings
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = 'media/'
 
 
 # Password validation
